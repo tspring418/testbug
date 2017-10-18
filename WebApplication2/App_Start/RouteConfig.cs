@@ -13,6 +13,17 @@ namespace WebApplication2
 
         public static void RegisterRoutes(RouteCollection routes)
         {
+            int ilast4 = 3;
+            string last4 = "a";
+            if (!int.TryParse(last4, out int _))
+
+                //throw new Exception("APC5: Invalid last4 Passed");
+                //if (int.TryParse(last4, out ilast4) == false) throw new Exception("APC5: Invalid last4 Passed");
+
+                if (ilast4 is int i)
+                {
+
+                }
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
@@ -20,17 +31,7 @@ namespace WebApplication2
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-            int ilast4 = 3;
-            string last4 = "a";
-            if (!int.TryParse(last4, out int _))
-                
-                //throw new Exception("APC5: Invalid last4 Passed");
-            //if (int.TryParse(last4, out ilast4) == false) throw new Exception("APC5: Invalid last4 Passed");
-
-            if (ilast4 is int i)
-            {
-
-            }
+           
         }
     }
 }
